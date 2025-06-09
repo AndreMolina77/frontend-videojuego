@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import {React, useState} from "react";
 import { useNavigate } from "react-router-dom"
 import Boton from "../components/Boton.jsx"
 
@@ -8,7 +8,7 @@ const Bienvenida = () => {
 
     const handleAceptar = () => {
         setShowBienvenida(false)
-        navigate("/home")
+        navigate("/inicio")
     }
 
     if (!showBienvenida) return null;

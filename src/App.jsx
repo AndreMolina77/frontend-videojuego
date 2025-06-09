@@ -1,11 +1,9 @@
-import React from 'react'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Bienvenida from "./pages/Bienvenida"
 import Inicio from "./pages/Inicio"
 import NotFound from './pages/PageNotFound'
 import Videojuegos from "./pages/Videojuegos"
 import { Toaster } from "react-hot-toast"
-import './App.css'
 
 function App() {
 
