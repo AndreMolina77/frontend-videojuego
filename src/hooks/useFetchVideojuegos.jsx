@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import{ url } from "../../utils/apiUrl"
 import { toast } from "react-hot-toast"
 
-const [videojuegos, setVideojuegos] = useState([]);
 
+const useFetchVideojuegos = () => {
+
+
+    const [videojuegos, setVideojuegos] = useState([]);
 const getVideojuegos = async () => {
+    
+
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -17,7 +22,8 @@ const getVideojuegos = async () => {
         console.error("Error haciendo fetch a los videojuegos:", error);
         toast.error("Error haciendo fetch a los videojuegos");
     }
-
+    
+}
 
 const getVideojuegoById = async (id) => {
     try {

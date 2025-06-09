@@ -4,7 +4,7 @@ import Boton from '../components/Boton'
 import useVideojuegosActions from '../hooks/useVideojuegosActions'
 import useFetchVideojuegos from '../hooks/useFetchVideojuegos'
 
-const Home = () => {
+const Inicio = () => {
   const { videojuegos, getVideojuegos } = useFetchVideojuegos()
   const { deleteVideojuego, handleUpdateVideojuego } = useVideojuegosActions(getVideojuegos)
 
@@ -13,7 +13,7 @@ const Home = () => {
       <Link to="/videojuegos" className="text-2xl font-bold text-gray-900 mb-4 bg-green-100 p-2 rounded w-full text-center hover:bg-green-200 transition-colors block mb-6">
         Agregar videojuego
       </Link>
-      <Titulo titulo="User Information"/>
+      <Titulo titulo="Información de videojuego"/>
       <p className="mt-1 text-sm text-gray-600 mb-4">Lista de videojuegos registrados.</p>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-200 rounded-lg">
@@ -28,7 +28,7 @@ const Home = () => {
           </thead>
           <tbody>
             {videojuegos?.map((videojuego) => (
-              <tr key={user.id} className="border-b hover:bg-gray-50 transition-colors">
+              <tr key={videojuego.id} className="border-b hover:bg-gray-50 transition-colors">
                 <td className="px-4 py-2">{videojuego.juego}</td>
                 <td className="px-4 py-2">{videojuego.genero}</td>
                 <td className="px-4 py-2">{videojuego.dificultad}</td>
